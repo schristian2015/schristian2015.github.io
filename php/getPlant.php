@@ -19,6 +19,7 @@ if ($result->num_rows > 0) {
 	
     // output data of each row
     while($row = $result->fetch_assoc()) {
+        ob_end_clean();
         echo(json_encode($row));
     }
 } else {
