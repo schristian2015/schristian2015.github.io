@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 
 $sql = "SELECT * FROM plants ORDER BY ID DESC LIMIT 1";
 $result = $conn->query($sql);
-ob_end_clean();
+
 if ($result->num_rows > 0) {
 	
     // output data of each row
@@ -27,4 +27,5 @@ if ($result->num_rows > 0) {
     echo "null";
 }
 $conn->close();
+ob_end_clean();
 ?>
