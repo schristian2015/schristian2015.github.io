@@ -1,4 +1,5 @@
 <?php
+ob_clean();
 $servername = "plantmaster1.cgh9vaqe9jkg.us-east-1.rds.amazonaws.com";
 $dbname = "test";
 $username = 'plantMaster1';
