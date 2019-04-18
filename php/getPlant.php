@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
+$servername = "plantmaster1.cgh9vaqe9jkg.us-east-1.rds.amazonaws.com";
 $dbname = "test";
-$username = 'root';
-$password = '';
+$username = 'plantMaster1';
+$password = 'plant##123';
 
 // Create connection
 $conn = new mysqli($servername,$username, $password, $dbname);
