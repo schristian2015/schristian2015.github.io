@@ -1,5 +1,5 @@
 <?php
-ob_clean();
+ob_start();
 $servername = "plantmaster1.cgh9vaqe9jkg.us-east-1.rds.amazonaws.com";
 $dbname = "test";
 $username = 'plantMaster1';
@@ -15,12 +15,12 @@ if ($conn->connect_error) {
 
 $sql = "SELECT * FROM plants ORDER BY ID DESC LIMIT 1";
 $result = $conn->query($sql);
-
+ob_end_clean();
 if ($result->num_rows > 0) {
 	
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        ob_end_clean();
+        
         echo(json_encode($row));
     }
 } else {
